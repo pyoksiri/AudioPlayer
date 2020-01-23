@@ -70,6 +70,7 @@ extension AudioPlayer {
                         stateBeforeBuffering = nil
                         state = .playing
                         player?.rate = rate
+                        resume()
                     } else {
                         player?.rate = 0
                         state = .paused
