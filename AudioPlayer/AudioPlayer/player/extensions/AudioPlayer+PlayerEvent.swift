@@ -28,14 +28,14 @@ extension AudioPlayer {
             backgroundHandler.beginBackgroundTask()
             pausedForInterruption = true
             pause()
-            print(".interruptionBegan")
+
         case .interruptionEnded(let shouldResume) where pausedForInterruption:
             if resumeAfterInterruption && shouldResume {
                 resume()
             }
             pausedForInterruption = false
             backgroundHandler.endBackgroundTask()
-            print(".interruptionEnded %d", shouldResume)
+
         case .loadedDuration(let time):
             if let currentItem = currentItem, let time = time.ap_timeIntervalValue {
                 updateNowPlayingInfoCenter()
