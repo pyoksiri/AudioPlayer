@@ -307,7 +307,7 @@ public class AudioPlayer: NSObject {
     // MARK: Private properties
 
     /// A boolean value indicating whether the player has been paused because of a system interruption.
-    var pausedForInterruption = false
+    public var pausedForInterruption = false
 
     /// A boolean value indicating if quality is being changed. It's necessary for the interruption count to not be
     /// incremented while new quality is buffering.
